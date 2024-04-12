@@ -1,11 +1,18 @@
 # NYC Green & Yellow Taxi Trip 2022-2023
 Yellow and green taxi trip records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. Dataset source - [LINK](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
+## Possible issues 
+1. How long in average taxi drivers going?
+2. What kind of payment type are they using?
+3. Is the fare affordable and fair? What reason?
+4. Which taxi company dominating the market?
+5. Are they any imbalance with the driving distances?
+ 
+
 ## Important Points
 * Using *.parquet* dataset of yellow and green taxi from **2022-2023** 
 * Data structure isn't always same with other years eg. these aren't included *pickup_longitude, pickup_latitude, dropoff_longitude, and dropoff_latitude*
 * As I don't own Power BI business account - there are **some limitation** with Desktop version incl doing data cleaning
-* 
 
 ## Table Content
 1. Google Cloud Platform (GCP) - https://cloud.google.com/
