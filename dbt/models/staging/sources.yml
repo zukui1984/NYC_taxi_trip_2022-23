@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: data-engineer-projects-2024
+    schema: nyc_taxi_trip
+
+    tables:
+      - name: greendata_trip_total
+      - name: yellowdata_trip_total
