@@ -18,11 +18,11 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 * As I don't own Power BI business account - there are **some limitation** with Desktop version incl doing data cleaning
 
 ## Table Content
-1. Google Cloud Platform (GCP) - https://cloud.google.com/
-2. Terraform - Infrastructure as Code (IaC) - https://www.terraform.io/
-3. Mage AI ELT/ETL - Orchestration tool - https://www.mage.ai/
-4. dbt - data build tool - https://cloud.getdbt.com/
-5. Power BI - Data visualisation - https://powerbi.microsoft.com/en-us/desktop
+1. Google Cloud Platform (GCP) 
+2. Terraform - Infrastructure as Code (IaC) 
+3. Mage AI ELT/ETL - Orchestration tool  
+4. dbt - data build tool  
+5. Power BI - Data visualisation  
 
 ## Diagram Structure
 
