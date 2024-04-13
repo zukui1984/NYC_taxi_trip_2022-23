@@ -27,8 +27,14 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 ## Diagram Structure
 
 ### Google Cloud Platform (GCP)
+1. Sign up on GCP platform https://cloud.google.com/
+2. Install Google SDK https://cloud.google.com/sdk/docs/install
+    - Authenticate the SDK with your GCP account "gcloud auth login" then set default of project "gcloud config set project PROJECT_ID"
+4. Enable API Library - Compute Engine, Storage Admin, Dataproc, BigQuery
+5. Create API Key on Service Accounts (IAM)
 
 ### Terraform
+cd Credit-card-approval-prediction-classification
 
 ### Mage AI - ELT/ETL
 
