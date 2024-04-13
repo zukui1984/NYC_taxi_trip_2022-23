@@ -14,7 +14,7 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 
 ## Important Points
 * Using *.parquet* dataset of yellow and green taxi from **2022-2023** 
-* Data structure isn't always same with other years eg. these aren't included *pickup_longitude, pickup_latitude, dropoff_longitude, and dropoff_latitude*
+* Data structure isn't always same with other years eg. these aren't included `pickup_longitude, pickup_latitude, dropoff_longitude, and dropoff_latitude`
 * As I don't own Power BI business account - there are **some limitation** with Desktop version incl doing data cleaning
 
 ## Table Content
@@ -34,7 +34,8 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 5. Create API Key on Service Accounts (IAM)
 
 ### Terraform
-cd Credit-card-approval-prediction-classification
+```cd Credit-card-approval-prediction-classificatio```
+<pip install mage-ai>
 
 ### Mage AI - ELT/ETL
 
