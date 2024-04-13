@@ -30,12 +30,15 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 1. Sign up on GCP platform https://cloud.google.com/
 2. Install Google SDK https://cloud.google.com/sdk/docs/install
     - Authenticate the SDK with your GCP account "gcloud auth login" then set default of project "gcloud config set project PROJECT_ID"
-4. Enable API Library - Compute Engine, Storage Admin, Dataproc, BigQuery
-5. Create API Key on Service Accounts (IAM)
+3. Enable API Library - Compute Engine, Storage Admin, Dataproc, BigQuery
+4. Create API Key on Service Accounts (IAM) and this key information will be use on Terraform and Mage AI
 
 ### Terraform
-```cd Credit-card-approval-prediction-classificatio```
-<pip install mage-ai>
+1. Setup the installation - [LINK](https://developer.hashicorp.com/terraform/install)
+2. Create `main.tf` using the information from GCP account eg. dataset, storage, credentials and instance
+3. Then run `terraform init`
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/raw/master/images/terraform-init.png" alt="Image Description">
+
 
 ### Mage AI - ELT/ETL
 
