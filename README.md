@@ -35,11 +35,11 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 
 ### Terraform
 1. Setup the installation - [LINK](https://developer.hashicorp.com/terraform/install)
-3. Create `main.tf` using the information from GCP account eg. dataset, storage, credentials and instance
-4. Then run `terraform init`
+2. Create `main.tf` using the information from GCP account eg. dataset, storage, credentials and instance
+3. Then run `terraform init`
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/raw/master/images/terraform-init.png" alt="terraform init" width="400">
 
-5. After run `terraform plan` and `terraform apply`
+4. After run `terraform plan` and `terraform apply`
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/terraform-apply.png" alt="terraform plan + apply" width="400">
 
 
@@ -52,8 +52,8 @@ git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
 && cp dev.env .env && rm dev.env \
 && docker compose up
 ```
-4. Run `http://localhost:6789` to see Mage AI
-5. Create Data Loader for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and Data Exporter - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
+3. Run `http://localhost:6789` to see Mage AI
+4. Create Data Loader for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and Data Exporter - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
 -    The code structure are similiar each other. Therefore I only add one coding file
 6.
 
