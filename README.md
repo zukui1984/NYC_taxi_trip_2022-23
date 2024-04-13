@@ -18,9 +18,9 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 * As I don't own Power BI business account - there are **some limitation** with Desktop version incl doing data cleaning
 
 ## Table Content
-1. Google Cloud Platform (GCP) 
+1. Google Cloud Platform (GCP): BigQuery & GCS - Data Warehouse
 2. Terraform - Infrastructure as Code (IaC) 
-3. Mage AI ELT/ETL - Orchestration tool  
+3. Mage AI - Data Pipeline
 4. dbt - data build tool  
 5. Power BI - Data visualisation  
 
@@ -43,9 +43,20 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/terraform-apply.png" alt="terraform plan + apply" width="400">
 
 
-
-
 ### Mage AI - ELT/ETL
+1. Prequisite: **Docker** must been setup before installing mage AI
+2. Install `docker pull mageai/mageai:latest` and run this code
+```
+git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
+&& cd mage-ai \
+&& cp dev.env .env && rm dev.env \
+&& docker compose up
+```
+4. Run `http://localhost:6789` to see Mage AI
+5. Create Data Loader for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and Data Exporter - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
+-    The code structure are similiar each other. Therefore I only add one coding file
+6.
+
 
 ### dbt 
 
