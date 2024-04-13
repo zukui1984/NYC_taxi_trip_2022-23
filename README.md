@@ -53,9 +53,28 @@ git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
 && docker compose up
 ```
 3. Run `http://localhost:6789` to see Mage AI
-4. Create Data Loader for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and Data Exporter - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
+4. Setup Google Credentials on Mage AI
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-gcp-config.JPG" alt="gcp confog" width="300">
+
+5. Create _Data Loader_ for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and _Data Exporter_ - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
 -    The code structure are similiar each other. Therefore I only add one coding file
-6.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-data-loader-result.JPG" alt="data loader" width="400">
+  <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-data-export-result.JPG" alt="data export" width="400">
+</div>
+<p>The <b>LEFT image (Data Loader)</b> shows the result of the data loader process, which loads the NYC taxi trip data into the system for further processing</p>
+<p>The <b>RIGHT image (Data Exporter)</b> shows the result of the data export process, which exports the processed data for use in other applications or analysis tools.</p>
+
+6. The Mage AI structure
+  <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-structure.JPG" alt="mage structure" width="200">
+
+7. Finally if we are successfully done each process - the workflow tree looks like this
+  <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-trees.JPG" alt="mage tree" width="600">
+
+
+
+
 
 
 ### dbt 
