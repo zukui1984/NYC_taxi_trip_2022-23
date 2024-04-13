@@ -94,5 +94,7 @@ git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
 9. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together. Lastly we'll see this diagram
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-lineage.JPG" alt="dbt lineage" width="500">
 
+For all dbt coding information - Please see it here [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/tree/master/dbt)
+
 ### Power BI
 
