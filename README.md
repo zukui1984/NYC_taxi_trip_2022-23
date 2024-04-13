@@ -1,13 +1,16 @@
 # NYC Green & Yellow Taxi Trip 2022-2023
 Yellow and green taxi trip records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. Dataset source - [LINK](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
+**Yellow Taxi**: The famous NYC yellow taxis that provide transportation exclusively through street hails. The number of taxicabs is limited by a finite number of medallions issued by the TLC. You can access this mode of transportation by standing in the street and hailing an available taxi with your hand. The pickups are not pre-arranged.
+
+**Green Taxi**: The outfit of their vehicles with green borough taxi branding, meters, credit card machines, and ultimately the right to accept street hails in addition to pre-arranged rides.
+
 ## Possible issues 
-1. How long in average taxi drivers going?
-2. What kind of payment type are they using?
-3. Is the fare affordable and fair? What reason?
-4. Which taxi company dominating the market?
-5. Are they any imbalance with the driving distances?
- 
+1. Which taxi company dominating the market? Can this implication giving an impact on competition and consumer choice in taxi industry?
+2. Are there any inconsistencies in data, such as driving trip distances or fare amounts?
+3. Are there any significant difference between the average trip distances of green and yellow taxis?
+4. Any possibilities of overcharging price fare for customers and which payment type are they using?
+
 
 ## Important Points
 * Using *.parquet* dataset of yellow and green taxi from **2022-2023** 
