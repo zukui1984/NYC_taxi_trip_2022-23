@@ -102,14 +102,13 @@ FROM
 2. Now we have similiar data list as `greendata_trip_2022` because before `yellowdata_trip_2022` was still incl. **airport_fee**
 
 ### dbt 
-1. Once the data is successfully transfer into GCP - You can start the transform process
-2. The transform process is using dbt official plattform - [LINK](https://cloud.getdbt.com/) for this. Therefore we don't need to do any installation locally.
-3. To setup the project we need API key from GCP Service Accounts
-4. Create new folder `staging` and first file `sources.yml` in Models folder - to declare tables that comes from data stores (BigQuery)
-5. After that create query for green/yellow taxi data and named this as `stg_greendata_2022.sql` and `stg_yellowdata_2022.sql` = same with data for 2023
+1. The transform process is using dbt official plattform - [LINK](https://cloud.getdbt.com/) for this. Therefore we don't need to do any installation locally.
+2. To setup the project we need API key from GCP Service Accounts
+3. Create new folder `staging` and first file `sources.yml` in Models folder - to declare tables that comes from data stores (BigQuery)
+4. After that create query for green/yellow taxi data and named this as `stg_greendata_2022.sql` and `stg_yellowdata_2022.sql` = same with data for 2023
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-structure-list.JPG" alt="dbt structure" width="200">
 
-6. Each query can be tested by running `Preview` then `dbt run` to see if works properly or not. But if you want run specific file you can do `dbt run --select greendata_2022`
+5. Each query can be tested by running `Preview` then `dbt run` to see if works properly or not. But if you want run specific file you can do `dbt run --select greendata_2022`
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt_run_process-1.png" alt="dbt run 1" width="300">
@@ -119,10 +118,10 @@ FROM
 <p>The <b>LEFT image</b> Run process</p>
 <p>The <b>RIGHT image</b>Details after run the proces.</p>
 
-7. Run `dbt build` so the data can be transfer into GCP BigQuery and the results look like this
+6. Run `dbt build` so the data can be transfer into GCP BigQuery and the results look like this
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-gcp-dataset.JPG" alt="dbt gcp table" width="300">
 
-9. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together. Lastly we'll see this diagram
+7. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together. Lastly we'll see this diagram
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-lineage.JPG" alt="dbt lineage" width="500">
 
 For all dbt coding information - Please see it here [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/tree/master/dbt)
