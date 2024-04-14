@@ -141,4 +141,18 @@ FROM `data-engineer-projects-2024.nyc_taxi_trip.greendata_trip_2023`
 For all dbt coding information - Please see it here [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/tree/master/dbt)
 
 ### Power BI
-1. 
+1. To collect data from BigQuery. We must choose "Get Data" -> "Database" -> "Google BigQuery"
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/powerbi-data-collect.JPG" alt="power bi data collect" width="300">
+
+3. Now we have a transformed data from dbt - We must see if there are still missing/incorrect data in this dataset. For this we need to compare based on documentation **greendata and yellowdata** that provide here [LINK](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf)
+
+4. Here we can find several column that has missing and incorrect values eg. `vendor_id, service_type, rate_code_id, payment_type, congestion_surcharge`
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/powerbi-data-cleaning.JPG" alt="power bi data cleaning" width="200">
+
+5. For data visualisation we are using line-,pie-,bar-,column-, and donut chart. The complete charts will look like this
+
+<div style="display: flex; justify-content: space-between;">
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/power_bi_screenshot.JPG" alt="power bi viz" width="600">
+</div>
+
+
