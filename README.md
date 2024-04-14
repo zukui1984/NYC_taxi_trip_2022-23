@@ -26,6 +26,9 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 7. Conclusion
 
 ## Diagram Structure
+<div style="display: flex; justify-content: space-between;">
+<img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/data-engineer-diagram.JPG" alt="diagram" width="600">
+</div>
 
 ### Google Cloud Platform (GCP)
 1. Sign up on GCP platform https://cloud.google.com/
