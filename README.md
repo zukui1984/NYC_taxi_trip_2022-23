@@ -100,6 +100,15 @@ FROM
     `data-engineer-projects-2024.nyc_taxi_trip.yellowdata_trip_2022`;
 ```
 2. Now we have similiar data list as `greendata_trip_2022` because before `yellowdata_trip_2022` was still incl. **airport_fee**
+3. We can combine now the table of `greendata_trip_2022` + `greendata_trip_2023` into `greendata_trip_total` (same with yellowdata)
+```sql
+CREATE OR REPLACE TABLE `data-engineer-projects-2024.nyc_taxi_trip.greendata_trip_total` AS
+SELECT *
+FROM `data-engineer-projects-2024.nyc_taxi_trip.yellowdata_trip_2022`
+UNION ALL
+SELECT *
+FROM `data-engineer-projects-2024.nyc_taxi_trip.greendata_trip_2023`
+```
 
 ### dbt 
 1. The transform process is using dbt official plattform - [LINK](https://cloud.getdbt.com/) for this. Therefore we don't need to do any installation locally.
@@ -121,10 +130,13 @@ FROM
 6. Run `dbt build` so the data can be transfer into GCP BigQuery and the results look like this
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-gcp-dataset.JPG" alt="dbt gcp table" width="300">
 
-7. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together. Lastly we'll see this diagram
+7. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together.
+-    stg_greendata_2023
+
+8. Lastly we'll see this diagram
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-lineage.JPG" alt="dbt lineage" width="500">
 
 For all dbt coding information - Please see it here [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/tree/master/dbt)
 
 ### Power BI
-
+1. 
