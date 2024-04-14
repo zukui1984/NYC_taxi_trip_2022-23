@@ -130,8 +130,10 @@ FROM `data-engineer-projects-2024.nyc_taxi_trip.greendata_trip_2023`
 6. Run `dbt build` so the data can be transfer into GCP BigQuery and the results look like this
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-gcp-dataset.JPG" alt="dbt gcp table" width="300">
 
-7. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To combine all cleaned data of greendatas and yellowdatas together.
--    stg_greendata_2023
+7. Create new folder in Models - name `Core` and new file `fact_zones.sql` - To transform and combine all cleaned data of greendatas and yellowdatas together.
+-    `stg_greendata_total.sql` - [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/dbt/models/staging/stg_greendata_total.sql)
+-    `stg_yellowdata_total.sql` - [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/dbt/models/staging/stg_yellowdata_total.sql)
+-    `facts_zones` (UNION both tables) - [LINK](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/dbt/models/core/fact_zones.sql)
 
 8. Lastly we'll see this diagram
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/dbt-lineage.JPG" alt="dbt lineage" width="500">
