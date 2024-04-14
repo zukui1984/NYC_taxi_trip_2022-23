@@ -22,7 +22,8 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 3. Mage AI - Data Pipeline
 4. GCP BigQuery - Data Warehouse 
 5. dbt - data build tool  
-6. Power BI - Data Visualisation  
+6. Power BI - Data Visualisation
+7. Conclusion
 
 ## Diagram Structure
 
@@ -155,4 +156,32 @@ For all dbt coding information - Please see it here [LINK](https://github.com/zu
 <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/power_bi_screenshot.JPG" alt="power bi viz" width="600">
 </div>
 
+## Conclusion 
+
+## Findings
+1. Green taxis had much longer average trip distances (53km) compared to yellow taxis (6km).
+2. VeriFone Inc. was the dominant taxi company with 58 million users, while Creative Mobile Technologies had 23 million users.
+3. A large portion (20.32%) of trips had "Negotiated fares" instead of standard rates.
+4. There was a difference of around 0.5 miles between the starting and ending taximeter readings on average trips.
+5. Credit card payments had longer average trip distances (3.2 miles) compared to cash payments (1 mile).
+
+The total number of passengers was 109 million, with tolls fees amounting to $42.93 million.
+
+The data highlights potential issues like service imbalances, lack of competition, fare transparency concerns, taximeter inaccuracies, and possible payment biases that may need to be addressed in the NYC taxi industry.
+
+## Suggestions
+1. Service imbalance between taxi types:
+-    Review regulations and implement incentives to encourage more balanced utilization across different trip distances.
+2. Taxi company dominance:
+-    Promote fair competition by removing barriers for smaller companies to enter the market.
+-    Review licensing frameworks to prevent unfair advantages.
+3. Prevalence of negotiated fares:
+-    Implement stricter regulations and transparency requirements for negotiated fares.
+-    Consider setting maximum limits based on distance and time.
+4. Taximeter discrepancies:
+-    Establish regular calibration programs and explore GPS-based fare calculation systems.
+-    Impose penalties for inaccurate or tampered taximeters.
+5. Payment type biases:
+-    Investigate factors behind the correlation between payment type and trip distance.
+-    Implement training and policies to prevent discrimination based on payment methods.
 
