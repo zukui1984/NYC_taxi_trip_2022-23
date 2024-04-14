@@ -20,8 +20,9 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 1. Google Cloud Platform (GCP): BigQuery & GCS - Data Warehouse
 2. Terraform - Infrastructure as Code (IaC) 
 3. Mage AI - Data Pipeline
-4. dbt - data build tool  
-5. Power BI - Data visualisation  
+4. GCP BigQuery - Data Warehouse 
+5. dbt - data build tool  
+6. Power BI - Data Visualisation  
 
 ## Diagram Structure
 
@@ -56,6 +57,7 @@ git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
 
 5. Create _Data Loader_ for `greendata_2022/2023` and `yellowdata_2022/2023`- [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_loader-load_greendata_2022.py) to pull out data and _Data Exporter_ - [code link](https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/mage-ai/data_export-export_greendata_2022.py) to transfer it into **Google Cloud Storage**
 -    The code structure are similiar each other. Therefore I only add one coding file
+-    Data Loader/Exporter process here are aiming to transfer directly to Google Cloud Storage
 
 <div style="display: flex; justify-content: space-between;">
   <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-data-loader-result.JPG" alt="data loader" width="400">
@@ -70,9 +72,38 @@ git clone https://github.com/mage-ai/compose-quickstart.git mage-ai \
 7. The ELT/ETL workflow tree looks like this diagram
   <img src="https://github.com/zukui1984/NYC_taxi_trip_22_23-Data_Engineer/blob/master/images/mage-trees.JPG" alt="mage tree" width="600">
 
+### GCP BigQuery 
+1. Once the data is successfully transfered in Cloud Storage we can create a table like this
+```sql
+CREATE OR REPLACE TABLE `data-engineer-projects-2024.nyc_taxi_trip.yellowdata_trip_2022` AS
+SELECT
+    VendorID AS vendor_id,
+    TIMESTAMP(lpep_pickup_datetime) AS pickup_datetime,
+    TIMESTAMP(lpep_dropoff_datetime) AS dropoff_datetime,
+    store_and_fwd_flag AS store_fwd_flag,
+    RatecodeID AS rate_code_id,
+    PULocationID AS pickup_location_id,
+    DOLocationID AS dropoff_location_id,
+    passenger_count,
+    trip_distance,
+    fare_amount,
+    extra,
+    mta_tax,
+    tip_amount,
+    tolls_amount,
+    improvement_surcharge,
+    total_amount,
+    payment_type,
+    trip_type,
+    congestion_surcharge
+FROM
+    `data-engineer-projects-2024.nyc_taxi_trip.yellowdata_trip_2022`;
+```
+2. Now we have similiar data list as `greendata_trip_2022` because before `yellowdata_trip_2022` was still incl. **airport_fee**
+
 ### dbt 
-1. Once the data is successfully transfer into GCP - We can start the transform process
-2. We are working with dbt portal -[LINK](https://cloud.getdbt.com/) for this. Therefore we don't need to do any installation locally.
+1. Once the data is successfully transfer into GCP - You can start the transform process
+2. The transform process is using dbt official plattform - [LINK](https://cloud.getdbt.com/) for this. Therefore we don't need to do any installation locally.
 3. To setup the project we need API key from GCP Service Accounts
 4. Create new folder `staging` and first file `sources.yml` in Models folder - to declare tables that comes from data stores (BigQuery)
 5. After that create query for green/yellow taxi data and named this as `stg_greendata_2022.sql` and `stg_yellowdata_2022.sql` = same with data for 2023
