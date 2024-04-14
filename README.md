@@ -33,7 +33,7 @@ Yellow and green taxi trip records include fields capturing pick-up and drop-off
 ### Google Cloud Platform (GCP)
 1. Sign up on GCP platform https://cloud.google.com/
 2. Install Google SDK https://cloud.google.com/sdk/docs/install
-    - Authenticate the SDK with your GCP account `gcloud auth login` then set default of project `gcloud config set project PROJECT_ID`
+    -    Authenticate the SDK with your GCP account `gcloud auth login` then set default of project `gcloud config set project PROJECT_ID`
 3. Enable API Library - **Compute Engine, Storage Admin, Dataproc, BigQuery**
 4. Create API Key on Service Accounts (IAM) and this key information will be use on Terraform and Mage AI
 
@@ -174,17 +174,17 @@ The data highlights potential issues like service imbalances, lack of competitio
 
 ## Suggestions
 1. Service imbalance between taxi types:
--    Review regulations and implement incentives to encourage more balanced utilization across different trip distances.
+    -    Review regulations and implement incentives to encourage more balanced utilization across different trip distances.
 2. Taxi company dominance:
--    Promote fair competition by removing barriers for smaller companies to enter the market.
--    Review licensing frameworks to prevent unfair advantages.
+    -    Promote fair competition by removing barriers for smaller companies to enter the market.
+    -    Review licensing frameworks to prevent unfair advantages.
 3. Prevalence of negotiated fares:
--    Implement stricter regulations and transparency requirements for negotiated fares.
--    Consider setting maximum limits based on distance and time.
+    -    Implement stricter regulations and transparency requirements for negotiated fares.
+    -    Consider setting maximum limits based on distance and time.
 4. Taximeter discrepancies:
--    Establish regular calibration programs and explore GPS-based fare calculation systems.
--    Impose penalties for inaccurate or tampered taximeters.
+    -    Establish regular calibration programs and explore GPS-based fare calculation systems.
+    -    Impose penalties for inaccurate or tampered taximeters.
 5. Payment type biases:
--    Investigate factors behind the correlation between payment type and trip distance.
--    Implement training and policies to prevent discrimination based on payment methods.
+    -    Investigate factors behind the correlation between payment type and trip distance.
+    -    Implement training and policies to prevent discrimination based on payment methods.
 
